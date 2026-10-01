@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '@/views/Dashboard.vue'
 const RoadSection = () => import('@/views/road_section/index.vue')
+const Clipping = () => import('@/views/clipping/index.vue')
 const Patrol = () => import('@/views/patrol/index.vue')
 const Pavement = () => import('@/views/pavement/index.vue')
 const Bridge = () => import('@/views/bridge/index.vue')
@@ -25,6 +26,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'dashboard', component: Dashboard },
     { path: '/road_section', name: 'road_section', component: RoadSection },
+    { path: '/clipping', name: 'clipping', component: Clipping },
     { path: '/patrol', name: 'patrol', component: Patrol },
     { path: '/pavement', name: 'pavement', component: Pavement },
     { path: '/bridge', name: 'bridge', component: Bridge },

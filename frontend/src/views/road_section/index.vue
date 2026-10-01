@@ -2,8 +2,8 @@
   <section class="page" data-module="road_section">
     <header class="page-head">
       <div>
-        <h2>路段管理管理</h2>
-        <p class="page-desc">维护管养路段，围绕路段编号、路段名称、起止桩号、道路等级做登记、筛选与状态流转。</p>
+        <h2>路段台账</h2>
+        <p class="page-desc">正式层路段台账，随「线段裁剪台」发布版本整体重算：底图、台账、巡查待办、工程边界始终同一版本。</p>
       </div>
       <div class="page-actions">
         <button class="btn primary" type="button" @click="openCreate">登记管养路段</button>
@@ -70,7 +70,7 @@ import { request } from '@/api/client'
 type Row = Record<string, string | number | null>
 
 const ENDPOINT = '/api/road_section'
-const columns = ["路段编号", "路段名称", "起止桩号", "道路等级", "车道数", "路面类型", "管养单位", "路段状态"]
+const columns = ["路段编号", "路段名称", "路线", "起止桩号", "道路等级", "车道数", "路面类型", "管养单位", "路段状态", "发布版本"]
 const actions = ["设置施工", "设置限行", "恢复通行"]
 const statuses = ["正常", "施工", "限行", "封闭"]
 const stats = [{"label": "正常路段", "value": 0}, {"label": "施工路段", "value": 0}, {"label": "限行路段", "value": 0}]

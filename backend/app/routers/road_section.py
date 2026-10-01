@@ -12,7 +12,7 @@ router = APIRouter(prefix="/api/road_section", tags=["路段管理"])
 
 service = RoadSectionService()
 
-LIST_FIELDS = ["路段编号", "路段名称", "起止桩号", "道路等级", "车道数", "路面类型", "管养单位", "路段状态"]
+LIST_FIELDS = ["路段编号", "路段名称", "路线", "起止桩号", "道路等级", "车道数", "路面类型", "管养单位", "路段状态", "发布版本"]
 STATUSES = ["正常", "施工", "限行", "封闭"]
 
 
