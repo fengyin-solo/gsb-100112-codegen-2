@@ -27,6 +27,10 @@ class Store:
                 return row
         return None
 
+    def replace_rows(self, module: str, rows: list[dict[str, Any]]) -> None:
+        """发布重算时整表替换正式层：台账、巡查、工程清单都按同一版本重写。"""
+        self._tables[module] = [dict(row) for row in rows]
+
     def overview(self) -> dict[str, object]:
         modules: list[dict[str, object]] = []
         for name in self.module_names():

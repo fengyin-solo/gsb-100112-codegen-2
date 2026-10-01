@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Dashboard from '@/views/Dashboard.vue'
+const ClipWorkbench = () => import('@/views/clip_workbench/index.vue')
 const RoadSection = () => import('@/views/road_section/index.vue')
 const Patrol = () => import('@/views/patrol/index.vue')
 const Pavement = () => import('@/views/pavement/index.vue')
@@ -24,6 +25,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', name: 'dashboard', component: Dashboard },
+    { path: '/clip_workbench', name: 'clip_workbench', component: ClipWorkbench },
     { path: '/road_section', name: 'road_section', component: RoadSection },
     { path: '/patrol', name: 'patrol', component: Patrol },
     { path: '/pavement', name: 'pavement', component: Pavement },
